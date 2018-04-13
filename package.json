@@ -1,0 +1,21 @@
+{
+  "name": "js-basics",
+  "version": "1.0.0",
+  "description": "Js Basic theory and practice",
+  "dependencies": {
+    "jshint": "^2.9.5"
+  },
+  "devDependencies": {
+    "jasmine": "^3.1.0"
+  },
+  "scripts": {
+    "test": "jasmine",
+    "problemMatcher": "$jasmine"
+  },
+  "keywords": [
+    "js",
+    "basics",
+    "practice"
+  ],
+  "license": "MIT"
+}
