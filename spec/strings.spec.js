@@ -27,6 +27,6 @@ describe("Strings:", function() {
   });
 
   it('[strings-4] should ', () => {
-    expect(getCurrency('$140').toBe(140));
+    expect(getCurrency('140$')).toBe(140);
   });
 });
