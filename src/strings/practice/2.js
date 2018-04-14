@@ -25,12 +25,7 @@ function checkFruits(str) {
 	let indexApple = strLower.indexOf('apple');
 	let indexPear = strLower.indexOf('pear');
 
-	if (indexApple > -1) {
-		return true;
-	} else if (indexPear > -1) {
-		return true;
-	}
-	return false;
+	return indexApple > -1 || indexPear > -1;
 
 }
 
