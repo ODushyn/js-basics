@@ -6,11 +6,8 @@
 
 module.exports = function capFirstLowLast(str) {
 	'use strict';
-	let firstChar = str[0];
-	let firstCharUpper = firstChar.toUpperCase();
-
-	let lastChar = str[str.length - 1];
-	let lastCharLower = lastChar.toLowerCase();
+	let firstCharUpper = str[0].toUpperCase();
+	let lastCharLower = str[str.length - 1].toLowerCase();
 
 	let middleChars = str.slice(1, str.length - 1);
 
@@ -20,11 +17,8 @@ module.exports = function capFirstLowLast(str) {
 
 function capFirstLowLast(str) {
 	'use strict';
-	let firstChar = str[0];
-	let firstCharUpper = firstChar.toUpperCase();
-
-	let lastChar = str[str.length - 1];
-	let lastCharLower = lastChar.toLowerCase();
+	let firstCharUpper = str[0].toUpperCase();
+	let lastCharLower = str[str.length - 1].toLowerCase();
 
 	let middleChars = str.slice(1, str.length - 1);
 
