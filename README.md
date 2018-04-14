@@ -13,7 +13,7 @@
 
 - `npm test` run all specs.
 - `jasmine --filter="{topic-filename}` test specific file. 
-  - Example: `jasmine --filter="strings-2"
+  - Example: `jasmine --filter="strings-2"`
 
 # Practice
 
