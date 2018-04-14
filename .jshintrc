@@ -1,7 +1,8 @@
 {
     "white": true,
     "esversion": 6,
-    "devel": true,
+    "undef": true,
+    "unused": true,
     "node": true,
     "jasmine": true
 }
