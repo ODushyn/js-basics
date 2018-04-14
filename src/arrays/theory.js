@@ -8,7 +8,7 @@
 let arr1 = [];
 let arr2 = ['hello', 'world', '!'];
 // array may contain different data types - BAD PRACTICE!
-let arr3 = ['hello', 21, {a: 6}];
+let arr3 = ['hello', 21, {a: 6}, []];
 console.log(arr1);
 console.log(arr2);
 console.log(arr3);
@@ -38,18 +38,40 @@ console.log(arr1); // ['New element2']
 //  - Add element to the end of array
 arr2.push('?');
 console.log(arr2); // [ 'hello', 'world', '!', '?' ]
+// - Remove element from end of array
+arr2.pop();
+console.log(arr2); // [ 'hello', 'world', '!']
 
 // - Iterating through the array
-// using for
+// using `for` loop
 for (let index = 0; index < arr2.length; index++) {
-    console.log(arr2[index]);
+    console.log(index + ': ' + arr2[index]);
 }
 // using forEach
 arr2.forEach((element, index) => {
    console.log(index + ': ' + element); 
 });
 
+// es6 methods - filter, map - returns new array!
+let numberArray = [1, 5, 3, 2];
+let newNumberArray = numberArray.filter((elem, index) => {
+    return elem > 2;
+});
+console.log(newNumberArray);
 
+let newMappedArray = numberArray.map((elem, index) => {
+    return elem * 2;
+});
+console.log(newMappedArray);
+
+
+/* 6. Multi dimension arrays */
+var matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+  ];
+console.log( matrix[0][2]);
 
 
 
