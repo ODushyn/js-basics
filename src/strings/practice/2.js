@@ -6,5 +6,29 @@
 
 module.exports = function checkFruits(str) {
 	'use strict';
-	// your code
+	let strLower = str.toLowerCase();
+	let indexApple = strLower.indexOf('apple');
+	let indexPear = strLower.indexOf('pear');
+
+	if (indexApple > -1) {
+		return true;
+	} else if (indexPear > -1) {
+		return true;
+	}
+	return false;
+};
+
+function checkFruits(str) {
+	'use strict';
+
+	let strLower = str.toLowerCase();
+	let indexApple = strLower.indexOf('apple');
+	let indexPear = strLower.indexOf('pear');
+
+	return indexApple > -1 || indexPear > -1;
+
 }
+
+console.log(checkFruits('Ab3dD'));
+console.log(checkFruits('Pear and banana'));
+console.log(checkFruits('pear and Apple'));

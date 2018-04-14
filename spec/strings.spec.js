@@ -14,11 +14,11 @@ describe("Strings:", function() {
   });
 
   it("[strings-2] should check fruits", function() {
-    expect(checkFruits('Great apples').toBe(true));
-    expect(checkFruits('Great ApPles').toBe(true));
-    expect(checkFruits('Great pears').toBe(true));
-    expect(checkFruits('Great Pears').toBe(true));
-    expect(checkFruits('Great bananas!').toBe(false));
+    expect(checkFruits('Great apples')).toBe(true);
+    expect(checkFruits('Great ApPles')).toBe(true);
+    expect(checkFruits('Great pears')).toBe(true);
+    expect(checkFruits('Great Pears')).toBe(true);
+    expect(checkFruits('Great bananas!')).toBe(false);
   });
 
   it('[strings-3] truncate string', () => {
