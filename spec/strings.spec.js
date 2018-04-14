@@ -21,9 +21,9 @@ describe("Strings:", function() {
     expect(checkFruits('Great bananas!').toBe(false));
   });
 
-  it('[string-3] truncate string', () => {
-    expect(truncate('Hello World', 5).toBe('Hell...'));
-    expect(truncate('Hello World', 10).toBe('Hello World'));
+  it('[strings-3] truncate string', () => {
+    expect(truncate('Hello World', 5)).toBe('Hell...');
+    expect(truncate('Hello World', 10)).toBe('Hello Wor...');
   });
 
   it('[strings-4] should ', () => {
