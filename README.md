@@ -6,13 +6,13 @@
 
 # Run scripts
 
-- `node .src/{topic}/practice/{filename}.js`. 
+- `node src/{topic}/practice/{filename}.js`. 
   - Example: `node src/1-strings/practice/1.js`
 
 # Run tests
 
 - `npm test` run all specs.
-- `jasmine --filter="{topic-filename}"` test specific file. 
+- `jasmine --filter="{topic-filename}` test specific file. 
   - Example: `jasmine --filter="{strings-2}`
 
 # Practice
