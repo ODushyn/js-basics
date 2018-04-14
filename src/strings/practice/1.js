@@ -7,4 +7,4 @@
 module.exports = function capFirstLowLast(str) {
 	'use strict';
 	// your code
-}
+};
