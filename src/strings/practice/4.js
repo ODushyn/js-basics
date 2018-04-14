@@ -7,5 +7,13 @@
 
 module.exports = function getCurrency(currencyStr) {
 	'use strict';
-	// your code
+	return + currencyStr.slice(0, currencyStr.length-1);	
 }
+
+function getCurrency (str) {
+	'use strict';
+   return Number(str.slice(0, str.length-1));	
+}
+
+
+console.log(getCurrency('120$'));

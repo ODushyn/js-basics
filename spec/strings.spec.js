@@ -26,7 +26,7 @@ describe("Strings:", function() {
     expect(truncate('Hello World', 10).toBe('Hello World'));
   });
 
-  it('[string-4] should ', () => {
-    expect(getCurrency('$140').toBe(140));
+  it('[strings-4] should ', () => {
+    expect(getCurrency('140$')).toBe(140);
   });
 });
