@@ -35,14 +35,20 @@ console.log(arr1); // ['New element2']
 
 /* 5. Array most frequently used methods */
 
-//  - Add element to the end
+//  - Add element to the end of array
 arr2.push('?');
 console.log(arr2); // [ 'hello', 'world', '!', '?' ]
 
 // - Iterating through the array
+// using for
 for (let index = 0; index < arr2.length; index++) {
     console.log(arr2[index]);
 }
+// using forEach
+arr2.forEach((element, index) => {
+   console.log(index + ': ' + element); 
+});
+
 
 
 

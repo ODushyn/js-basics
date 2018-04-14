@@ -4,7 +4,7 @@
     return: true if string contains: apple or pear, false - otherwise
 */
 
-function checkFruits(string) {
+module.exports = function checkFruits(str) {
 	'use strict';
 	// your code
 }

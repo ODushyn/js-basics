@@ -26,15 +26,15 @@ console.log('Second char is: ' + secondChar2); // e
 /* 4. Changing string. REMEMBER: strings are immutable! */
 // Strings are immutable -  it is not possible to change the string.
 // The only way to change the string is to create a new one based on existing one.
-let thirdChar = singleQuotesStr[2];
-let eightChar = singleQuotesStr[7];
-let ninthChar = singleQuotesStr[8];
-let eleventhChar = singleQuotesStr[10];
+let thirdChar = singleQuotesStr[2]; // l
+let eightChar = singleQuotesStr[7]; // o
+let ninthChar = singleQuotesStr[8]; // r
+let eleventhChar = singleQuotesStr[10]; // d
 console.log(thirdChar + eightChar + ninthChar + eleventhChar); // lord
 
 /* 5. Change string to lower or upper case */
 console.log('UPPERCASE: ' + singleQuotesStr.toUpperCase());
-console.log('lowercase' + singleQuotesStr.toLowerCase());
+console.log('lowercase: ' + singleQuotesStr.toLowerCase());
 
 /* 6. Finding the substring */
 // For finding the substring indexOf(searchValue[, fromIndex]) method is used.
@@ -63,11 +63,13 @@ console.log(singleQuotesStr.substring(2, 4)); // ll
 console.log(singleQuotesStr.substring(1)); // ello World!
 
 // 7.2 Method substr(start [, length]) is used for that
-console.log(singleQuotesStr.substr(2, 4)); // llo
+console.log(singleQuotesStr.substr(2, 5)); // llo W
 // if no end param
 console.log(singleQuotesStr.substr(1)); // ello World!
 
 // 7.3 Method slice(start [, length]) - same as substring
+console.log(singleQuotesStr.slice(2, 4));
+
 
 /* 8. String comparison and encoding (UNICODE) */
 console.log('a'.charCodeAt(0)); // 97

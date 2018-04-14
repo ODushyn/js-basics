@@ -2,10 +2,10 @@
 	Write function `getCurrency` that
 		take: string
     return: number
-  Example: `120$` -> `120`
+  Example: `120$` -> `120`, `320E' -> `320`
 */
 
-function getCurrency(currencyStr) {
+module.exports = function getCurrency(currencyStr) {
 	'use strict';
 	// your code
 }
