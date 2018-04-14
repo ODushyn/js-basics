@@ -7,5 +7,25 @@
 
 module.exports = function truncate(str, maxLength) {
 	'use strict';
-	// your code
+	let strLength = str.length;
+	let strNew = str.slice(0, maxLength-1);
+
+	if (maxLength >= strLength) {
+		return str;
+	}
+	return strNew + "...";
+	
 }
+
+function truncate(str, maxLength) {
+	let strLength = str.length;
+	let strNew = str.slice(0, maxLength-1);
+
+	if (maxLength >= strLength) {
+		return str;
+	}
+	return strNew + "...";
+}
+
+console.log(truncate('Hello World', 5));
+console.log(truncate('Hello World', 10));
