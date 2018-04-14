@@ -7,7 +7,7 @@
 # Run scripts
 
 - `node src/{topic}/practice/{filename}.js`. 
-  - Example: `node src/1-strings/practice/1.js`
+  - Example: `node src/strings/practice/1.js`
 
 # Run tests
 

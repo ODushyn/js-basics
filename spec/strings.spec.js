@@ -14,19 +14,19 @@ describe("Strings:", function() {
   });
 
   it("[strings-2] should check fruits", function() {
-    expect(checkFruits('Great apples').toBe(true));
-    expect(checkFruits('Great ApPles').toBe(true));
-    expect(checkFruits('Great pears').toBe(true));
-    expect(checkFruits('Great Pears').toBe(true));
-    expect(checkFruits('Great bananas!').toBe(false));
+    expect(checkFruits('Great apples')).toBe(true);
+    expect(checkFruits('Great ApPles')).toBe(true);
+    expect(checkFruits('Great pears')).toBe(true);
+    expect(checkFruits('Great Pears')).toBe(true);
+    expect(checkFruits('Great bananas!')).toBe(false);
   });
 
   it('[string-3] truncate string', () => {
-    expect(truncate('Hello World', 5).toBe('Hell...'));
-    expect(truncate('Hello World', 10).toBe('Hello World'));
+    expect(truncate('Hello World', 5)).toBe('Hell...');
+    expect(truncate('Hello World', 10)).toBe('Hello World');
   });
 
   it('[string-4] should ', () => {
-    expect(getCurrency('$140').toBe(140));
+    expect(getCurrency('$140')).toBe(140);
   });
 });
