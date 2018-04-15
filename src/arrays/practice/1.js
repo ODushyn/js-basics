@@ -1,6 +1,6 @@
 function arr1(arr) {
     let lastItem = arr[arr.length - 1];
-    return LastItem;
+    return lastItem;
 }
 
 console.log(arr1([1, 33, 5, 7, 8]));
