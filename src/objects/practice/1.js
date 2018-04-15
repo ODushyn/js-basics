@@ -6,6 +6,15 @@
  * Удалите свойство name из объекта.
  */
 
+let obj = {
+    name: "Вася",
+    surname: "Петров",
+};
+
 function basicFunc() {
-  
+ obj.name = "Сергей";
+ delete obj.name;
+ return obj;
 }
+
+console.log(basicFunc(obj));
