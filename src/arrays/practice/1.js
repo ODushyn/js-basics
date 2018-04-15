@@ -1,5 +1,5 @@
 function arr1(arr) {
-    let LastItem = arr[arr.length - 1];
+    let lastItem = arr[arr.length - 1];
     return LastItem;
 }
 
