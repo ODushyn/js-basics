@@ -13,10 +13,10 @@ let myObject3 = {
   run: function() {
     console.log("run");
     return "Im running...";
-  },
+  }
 };
 
-/* 2. Modify array */
+/* 2. Modify object */
 // Adding new property
 myObject.name = "Alona";
 myObject["age"] = 5;
@@ -29,16 +29,23 @@ myObject.age = 16;
 delete myObject.age;
 
 /* 3. Access specific element. */
-console.log(myObject.name);
+//console.log(myObject.name);
 // Access  key by variable value
-let str = 'age';
-myObject[str] = 21;
+let index = 'name';
+console.log(myObject.index);
+
 
 /* 4. Check whether property exist or not  */
-let isNameExist = myObject.name === undefined;
-let isAgeExist = "name" in myObject;
+let obj = {
+  a: 2
+};
+let isNameExist = obj.a !== undefined;
+let isAgeExist = "a" in obj;
+console.log(isNameExist);
+console.log(isAgeExist);
+
 /* Iterate through the properties */
 for (let key in myObject) {
-  console.log(key + ': ' + myObject);
+  console.log(key + ': ' + myObject[key]);
 }
 
