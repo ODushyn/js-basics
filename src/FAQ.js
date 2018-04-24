@@ -28,7 +28,7 @@ console.log(a.prop); // property prop in a object changed as well!!! Was 0, but 
  */
 // Closure is ...
 function mult(a) {
-  return function(b) {
+  return function (b) {
     // a is available here from closure!
     return a * b;
   };
@@ -43,7 +43,7 @@ function sum(a, b) {
   return a + b;
 }
 // Function Expression
-var sum = function(a, b) {
+var sum = function (a, b) {
   return a + b;
 };
 
@@ -52,7 +52,7 @@ var sum = function(a, b) {
 bb(); // Works! Prints bb,  because bb is function declaration;
 console.log(b); // undefined, because interpretator lifts up only that b is declared but it does not initialize it!
 var b = 4;
-var aa = function() {
+var aa = function () {
   console.log("aa");
 };
 function bb() {
@@ -103,11 +103,11 @@ console.log(argFunction(1, 2, 3));
  */
 // Callback function is a function that is passed into another one and will be called later.
 let arr = [1, 2];
-[1.2].forEach(function(element, index) {
+[1.2].forEach(function (element, index) {
   // this is a callback function;
 });
 
-let callbackFunc = function() {
+let callbackFunc = function () {
   console.log("I a callback function");
 };
 // pass  callback function inside another function as argument and call it
@@ -124,23 +124,42 @@ receiveCallback(callbackFunc); // prints I am callback function
 // Often used methods: indexOf, slice, substr
 // Access element str[index]
 
-/**
- * 10. Write a function that reverse a string
- */
-// Your code here
+// 10. Write a function that reverse a string
+
+var str = 'table';
+
+function newStr(a) {
+  var rev = '';
+  for (var i = a.length - 1; i >= 0; i--) {
+    rev += a[i];
+  }
+  return rev;
+}
+
+console.log(newStr(str));
+
+
 
 /**
  * 11. What are arrays? What are main methods to work with them?
  */
 // Array is a data structure mainly for holding ordered data. (for example for displaying the data in the tables)
 // length property: [1,2,3].length
-// methods: forEach, filter, map
+// methods: forEach, filter, map, evry, some, (callback(item,i,arr))
+//reduse
 
 /**
  * 12. What is an object?
  */
 // Object is data structure that represents data in key-value way(associative array).
 // check if property exist in the object: let isPropExist = (prop in obj)
+var a = { key: 1 };
+console.log('key' in a); //true
+console.log('keysss' in a); //false
+console.log(a.key === undefined); //false
+console.log(a.key === undefined); ////false
+console.log(a.keysss === undefined); //true
+
 
 /**
  * 13. How iterate through the array?
@@ -151,7 +170,7 @@ let array = [];
 for (let index = 0; index < array.length; index++) {
 }
 // forEach
-[].forEach(function(elem){
+[].forEach(function (elem) {
 
 });
 // while/ do-while
@@ -161,7 +180,7 @@ for (let index = 0; index < array.length; index++) {
 /**
  * 14. What will program print?
  */
-let myArr = [1,2];
+let myArr = [1, 2];
 myArr[5] = 5;
 console.log(myArr); // [ 1, 2, <3 empty items>, 5 ]
 
@@ -192,3 +211,49 @@ varlet();
 // For example: in strict mode programmer should always declare variable before using it
 // not strict mode: a = 5 - works fine
 // strict mode: must be var a = 5.
+
+
+/**
+ * 18. Construction  for(var key in obj)
+ */
+// це спецільна конструкція
+// for(var key in obj). - ключове слово in
+var arr = [3, 4, 5];
+for (var i in arr) {
+  console.log(i);  // 0,1,2
+}
+
+/**
+ * 19. Construction  for (let value of arr)
+ */
+// це спецільна конструкція
+// for (let value of arr). - ключове слово of
+var arr = [3, 4, 5];
+for (let value of arr) {
+  console.log(value);
+} // 3, 4, 5
+
+
+/**
+ * 20.Перехват ошибок, "try..catch"
+ */
+try {
+  myFunc();
+} catch (error) {
+}
+
+function myFunc() {
+  // some code
+  throw new Error();
+}
+
+
+// 21. DOM (от англ. Document Object Model — «объектная модель документа») — 
+//это независящий от платформы и языка программный интерфейс, 
+//позволяющий программам и скриптам получить доступ к содержимому HTML-, XHTML- и XML-документов, 
+//а также изменять содержимое, структуру и оформление таких документов.
+
+// 22.API (программный интерфейс приложения, интерфейс прикладного программирования) (англ. application programming interface, API [эй-пи-ай][1]) — набор готовых классов, процедур, функций, структур и констант, предоставляемых приложением (библиотекой, сервисом) или операционной системой для использования во внешних программных продуктах. Используется программистами при написании всевозможных приложений.
+
+
+//23. Цикл событий (Event Loop) — это то, что позволяет Node.js выполнять неблокирующие операции ввода/вывода (несмотря на то, что JavaScript является однопоточным) путем выгрузки операций в ядро системы, когда это возможно.
