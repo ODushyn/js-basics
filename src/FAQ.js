@@ -248,12 +248,78 @@ function myFunc() {
 }
 
 
-// 21. DOM (от англ. Document Object Model — «объектная модель документа») — 
-//это независящий от платформы и языка программный интерфейс, 
-//позволяющий программам и скриптам получить доступ к содержимому HTML-, XHTML- и XML-документов, 
-//а также изменять содержимое, структуру и оформление таких документов.
+/* 21. DOM (от англ. Document Object Model — «объектная модель документа») — 
+*это независящий от платформы и языка программный интерфейс, 
+*позволяющий программам и скриптам получить доступ к содержимому HTML-, XHTML- и XML-документов, 
+* также изменять содержимое, структуру и оформление таких документов.
+*/
 
 // 22.API (программный интерфейс приложения, интерфейс прикладного программирования) (англ. application programming interface, API [эй-пи-ай][1]) — набор готовых классов, процедур, функций, структур и констант, предоставляемых приложением (библиотекой, сервисом) или операционной системой для использования во внешних программных продуктах. Используется программистами при написании всевозможных приложений.
 
 
 //23. Цикл событий (Event Loop) — это то, что позволяет Node.js выполнять неблокирующие операции ввода/вывода (несмотря на то, что JavaScript является однопоточным) путем выгрузки операций в ядро системы, когда это возможно.
+
+/* 
+24. Set, get , prototype
+*/
+
+function People(name, age, hair) {
+    this.name = name;
+    this._age = age;
+    this.hair = hair;
+    var hand = 2;
+    this.aHand = function () {
+        return hand;
+    };
+    this.bHand = function (n) {
+        hand = hand - n;
+    };
+}
+
+People.prototype.legs = 2;
+
+var kolia = new People('Kolia', 20, 'braun');
+
+Object.defineProperty(kolia, 'age', { 
+    get: function () { return this._age + 1; },
+    set: function(newAge) { this._age += newAge; }, 
+});
+
+
+kolia.bHand(1);
+
+console.log(kolia);
+
+console.log(kolia.aHand());
+
+kolia.age = 5;
+console.log(kolia.age);
+
+// 25 Spread and concat method
+
+var a, b, c, d, e;  
+a = [1,2,3];  
+b = "dog";  
+c = [42, "cat"];  
+  
+// Using the concat method.  
+d = a.concat(b, c);  
+  
+// Using the spread operator.  
+e = [...a, b, ...c];  
+  
+console.log(d);  // 1, 2, 3, "dog", 42, "cat"  
+console.log(e);  // 1, 2, 3, "dog", 42, "cat"  
+
+// Using the spread operator.  
+function f(a, b, c, x, y, z) {  
+  return a + b + c + x + y + z;  
+}  
+  
+var args = [1, 2, 3];  
+console.log(f(...args, 4, ...[5, 6]));  
+  
+
+
+
+
